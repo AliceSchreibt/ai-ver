@@ -221,6 +221,12 @@
       Скачать паспорт
     </a>
 
+
+    <table class="links-table" id="partsTable">
+</table>
+
+
+    
     <div class="model-wrapper">
 
       <model-viewer
@@ -304,6 +310,42 @@
   <footer>
     Industrial Engineering Platform
   </footer>
+
+
+<script>
+
+fetch('/public/data/Комплектующие.json')
+  .then(response => response.json())
+  .then(data => {
+
+    const table = document.getElementById('partsTable');
+
+    table.innerHTML = `
+      <tr>
+        <th>Комплектующее</th>
+        <th>Ссылка</th>
+      </tr>
+    `;
+
+    data.forEach(item => {
+
+      table.innerHTML += `
+        <tr>
+          <td>${item.name}</td>
+          <td>
+            <a href="${item.link}" target="_blank">
+              Открыть
+            </a>
+          </td>
+        </tr>
+      `;
+
+    });
+
+  });
+
+</script>
+  
 
 </body>
 
