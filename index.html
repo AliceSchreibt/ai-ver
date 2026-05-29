@@ -1,0 +1,295 @@
+
+
+html
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Станция испытания</title>
+
+  <script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+      font-family: "Century Gothic", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, #f4f4f4 0%, #ffffff 60%);
+    }
+
+    h1 {
+      font-size: 72px;
+      font-weight: normal;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      color: #666;
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .passport-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 34px;
+      border-radius: 999px;
+      border: 1px solid #111;
+      text-decoration: none;
+      color: #111;
+      transition: 0.25s ease;
+      font-size: 16px;
+      background: white;
+      margin-bottom: 70px;
+    }
+
+    .passport-btn:hover {
+      background: #111;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .model-wrapper {
+      width: 100%;
+      max-width: 1400px;
+      height: 78vh;
+      border-radius: 32px;
+      overflow: hidden;
+      background: #f8f8f8;
+      box-shadow:
+        0 10px 40px rgba(0,0,0,0.08),
+        0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #f8f8f8, #ececec);
+    }
+
+    .section {
+      width: 100%;
+      max-width: 1200px;
+      margin: 120px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 52px;
+      font-weight: normal;
+      margin-bottom: 40px;
+      letter-spacing: -1px;
+    }
+
+    .table-container {
+      border-radius: 28px;
+      overflow: hidden;
+      background: white;
+      box-shadow:
+        0 8px 30px rgba(0,0,0,0.06);
+    }
+
+    .links-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .links-table th {
+      text-align: left;
+      padding: 24px;
+      background: #fafafa;
+      font-size: 18px;
+      font-weight: normal;
+      border-bottom: 1px solid #ececec;
+    }
+
+    .links-table td {
+      padding: 24px;
+      border-bottom: 1px solid #f2f2f2;
+      font-size: 17px;
+    }
+
+    .links-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .links-table tr {
+      transition: 0.2s ease;
+    }
+
+    .links-table tr:hover {
+      background: #fafafa;
+    }
+
+    .links-table a {
+      color: #111;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .links-table a:hover {
+      opacity: 0.6;
+    }
+
+    .description {
+      font-size: 22px;
+      line-height: 1.9;
+      color: #333;
+      max-width: 1000px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: #777;
+      font-size: 15px;
+    }
+
+    @media (max-width: 900px) {
+
+      h1 {
+        font-size: 46px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      .model-wrapper {
+        height: 60vh;
+      }
+
+      .description {
+        font-size: 18px;
+      }
+
+      .links-table th,
+      .links-table td {
+        padding: 18px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <h1>Станция испытания</h1>
+
+    <div class="subtitle">
+      Инженерная система для испытания и контроля параметров оборудования.
+    </div>
+
+    <a class="passport-btn"
+       href="/public/docs/passport.PDF"
+       target="_blank">
+      Скачать паспорт
+    </a>
+
+    <div class="model-wrapper">
+
+      <model-viewer
+        src="stantion.glb"
+        camera-controls
+        auto-rotate
+        auto-rotate-delay="0"
+        rotation-per-second="2deg"
+        interaction-prompt="none"
+        shadow-intensity="1"
+        exposure="1"
+        touch-action="pan-y">
+      </model-viewer>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2>Комплектующие</h2>
+
+    <div class="table-container">
+
+      <table class="links-table">
+
+        <tr>
+          <th>Комплектующее</th>
+          <th>Документация</th>
+        </tr>
+
+        <tr>
+          <td>Насос</td>
+          <td>
+            <a href="https://example.com/pump" target="_blank">
+              Открыть
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Цилиндр</td>
+          <td>
+            <a href="https://example.com/cylinder" target="_blank">
+              Открыть
+            </a>
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2>Описание работы установки</h2>
+
+    <div class="description">
+      С помощью насосов идет перекачка хладогента.
+    </div>
+
+  </section>
+
+  <footer>
+    Industrial Engineering Platform
+  </footer>
+
+</body>
+
+</html>
