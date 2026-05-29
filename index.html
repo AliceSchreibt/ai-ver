@@ -299,7 +299,7 @@
 
 <script>
 
-fetch('/public/data/test_list.json')
+fetch('/public/data/components.json')
 
   .then(response => {
 
@@ -328,8 +328,7 @@ fetch('/public/data/test_list.json')
       table.innerHTML += `
         <tr>
           <td>${item.name}</td>
-          <td>
-          </td>
+          <td>  </td>
           <td>
             <a href="${item.link}" target="_blank">
               Открыть
