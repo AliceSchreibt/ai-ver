@@ -301,15 +301,7 @@
 
 fetch('/public/data/test_list.json')
 
-  .then(response => {
-
-    if(!response.ok){
-      throw new Error('JSON не найден');
-    }
-
-    return response.json();
-
-  })
+  .then(response => response.json())
 
   .then(data => {
 
@@ -319,7 +311,7 @@ fetch('/public/data/test_list.json')
       <tr>
         <th>Название</th>
         <th>Количество</th>
-        <th>Ссылка</th>
+        <th>Открыть</th>
       </tr>
     `;
 
@@ -327,23 +319,17 @@ fetch('/public/data/test_list.json')
 
       table.innerHTML += `
         <tr>
-          <td>${item.name}</td>
-          <td>  </td>
+          <td>${item["Название"]}</td>
+          <td>${item["Количество"]}</td>
           <td>
-            <a href="${item.link}" target="_blank">
-              Открыть
-            </a>
+            ${item["Открыть"]
+              ? `<a href="${item["Открыть"]}" target="_blank">Открыть</a>`
+              : '—'}
           </td>
         </tr>
       `;
 
     });
-
-  })
-
-  .catch(error => {
-
-    console.error(error);
 
   });
 
