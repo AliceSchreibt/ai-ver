@@ -301,7 +301,17 @@
 <script>
 
 fetch('/public/data/components.json')
-  .then(response => response.json())
+
+  .then(response => {
+
+    if(!response.ok){
+      throw new Error('JSON не найден');
+    }
+
+    return response.json();
+
+  })
+
   .then(data => {
 
     const table = document.getElementById('partsTable');
@@ -327,6 +337,12 @@ fetch('/public/data/components.json')
       `;
 
     });
+
+  })
+
+  .catch(error => {
+
+    console.error(error);
 
   });
 
