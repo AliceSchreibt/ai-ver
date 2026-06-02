@@ -334,13 +334,16 @@ fetch('/public/data/list_comp.json')
 </script>
 
 
-  <script>
-fetch('./public/data/description.txt')
-  .then(response => response.text())
-  .then(text => {
-    document.getElementById('description').innerHTML =
-      text.replace(/\n/g, '<br>');
-  });
+ <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+
+<script>
+fetch('/public/docs/description.docx')
+  .then(response => response.arrayBuffer())
+  .then(arrayBuffer => mammoth.convertToHtml({ arrayBuffer }))
+  .then(result => {
+    document.getElementById('description').innerHTML = result.value;
+  })
+  .catch(error => console.error(error));
 </script>
   
   
