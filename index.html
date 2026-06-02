@@ -286,9 +286,7 @@
 
     <h2>Описание работы установки</h2>
 
-    <div class="description">
-      С помощью насосов идет перекачка хладагента.
-    </div>
+   <div id="description"></div>
 
   </section>
 
@@ -334,6 +332,17 @@ fetch('/public/data/list_comp.json')
   });
 
 </script>
+
+
+  <script>
+fetch('./data/description.txt')
+  .then(response => response.text())
+  .then(text => {
+    document.getElementById('description').innerHTML =
+      text.replace(/\n/g, '<br>');
+  });
+</script>
+  
   
 </body>
 
