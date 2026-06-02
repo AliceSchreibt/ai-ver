@@ -1,0 +1,47 @@
+[
+  {
+    "Название": "Холодильная машина",
+    "Количество": 1,
+    "Открыть": ""
+  },
+  {
+    "Название": "Рама в сборе",
+    "Количество": 1,
+    "Открыть": ""
+  },
+  {
+    "Название": "Блок нагрева пропиленглюколя для оттайки",
+    "Количество": 1,
+    "Открыть": ""
+  },
+  {
+    "Название": "Фильтр DN65",
+    "Количество": 1,
+    "Открыть": "https://stoking.ru/products/filtr-setchatyy-flancevyy-gross-chugun-dn-65-pn-16-s-magnitnoy-vstavkoy"
+  },
+  {
+    "Название": "Затвор Dn65",
+    "Количество": 1,
+    "Открыть": "https://civilizationzti.ru/product/zatvor-diskovyj-povorotnyj-tecofi-vp-3448-du200-ru16-mezhflancevyj/"
+  },
+  {
+    "Название": "Дисковый затвор DN80",
+    "Количество": 1,
+    "Открыть": "https://ridan.ru/product/082X4403R"
+  },
+  {
+    "Название": "Воздуходувка EVL 194.18 3ph",
+    "Количество": 1,
+    "Открыть": "https://erstvak.com/product/vikhrevaya-vozdukhoduvka-erstevak-evl-194-18-3f/"
+  },
+  {
+    "Название": "Воздуходувка EVL 117.22 3ph",
+    "Количество": 1,
+    "Открыть": "https://erstvak.com/product/vikhrevaya-vozdukhoduvka-erstevak-evl-117-22-3f/"
+  },
+  {
+    "Название": "Воздуходувка EVH 13.29",
+    "Количество": 1,
+    "Открыть": "https://erstvak.com/product/vikhrevaya-vozdukhoduvka-erstevak-evh-13-29-3-f/"
+  }
+]
