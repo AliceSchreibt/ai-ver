@@ -247,6 +247,24 @@
 #description th{
   background:#f5f5f5;
 }
+
+
+#description table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+}
+
+#description th,
+#description td {
+  padding: 20px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+#description th {
+  background: #fafafa;
+}
     
 
   </style>
@@ -302,11 +320,13 @@
       
   <section class="section">
 
-    <h2>Описание работы установки</h2>
+  <h2>Описание работы установки</h2>
 
- <div id="description" class="description"></div>
+  <div class="table-container">
+    <div id="description"></div>
+  </div>
 
-  </section>
+</section>
 
   <footer>
     Industrial Engineering Platform
