@@ -80,18 +80,19 @@
 
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 60px 20px;
-
-  text-align: center;
-
+  width:100%;
+  padding:60px 20px;
+  text-align:center;
   background:
     radial-gradient(circle at top, #f4f4f4 0%, #ffffff 60%);
+}
+
+@media (max-width:768px){
+
+  .hero{
+    padding:30px 15px;
+  }
+
 }
     
     .passport-btn {
@@ -115,17 +116,20 @@
       transform: translateY(-2px);
     }
 
-    .model-wrapper {
-      width: 100%;
-      max-width: 1400px;
-      height: 78vh;
-      border-radius: 32px;
-      overflow: hidden;
-      background: #f8f8f8;
-      box-shadow:
-        0 10px 40px rgba(0,0,0,0.08),
-        0 2px 8px rgba(0,0,0,0.05);
-    }
+  .model-wrapper{
+  width:100%;
+  max-width:1200px;
+  height:70vh;
+  margin:0 auto;
+}
+
+    @media (max-width:768px){
+
+  .model-wrapper{
+    height:350px;
+  }
+
+}
 
     model-viewer {
       width: 100%;
