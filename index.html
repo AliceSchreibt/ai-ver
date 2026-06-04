@@ -58,32 +58,25 @@
       overflow-x: hidden;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
-      text-align: center;
-      background:
-        radial-gradient(circle at top, #f4f4f4 0%, #ffffff 60%);
-    }
+    @media (max-width: 768px) {
 
-    h1 {
-      font-size: 72px;
-      font-weight: normal;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-    }
+  .hero{
+    min-height:auto;
+    padding:40px 20px;
+  }
 
-    .subtitle {
-      font-size: 22px;
-      color: #666;
-      max-width: 700px;
-      line-height: 1.6;
-      margin-bottom: 40px;
-    }
+  h1{
+    font-size:48px;
+    line-height:1.1;
+    letter-spacing:-1px;
+  }
+
+  .subtitle{
+    font-size:18px;
+    margin-bottom:30px;
+  }
+
+}
 
     .passport-btn {
       display: inline-flex;
