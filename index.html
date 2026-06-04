@@ -78,6 +78,22 @@
 
 }
 
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 60px 20px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(circle at top, #f4f4f4 0%, #ffffff 60%);
+}
+    
     .passport-btn {
       display: inline-flex;
       align-items: center;
@@ -197,34 +213,59 @@
       font-size: 15px;
     }
 
-    @media (max-width: 900px) {
+  @media (max-width: 768px){
 
-      h1 {
-        font-size: 46px;
-      }
+  .hero{
+    padding:30px 15px;
+    min-height:auto;
+  }
 
-      h2 {
-        font-size: 36px;
-      }
+  h1{
+    font-size:42px;
+    line-height:1.1;
+    margin-bottom:15px;
+  }
 
-      .subtitle {
-        font-size: 18px;
-      }
+  h2{
+    font-size:36px;
+    margin-bottom:20px;
+  }
 
-      .model-wrapper {
-        height: 60vh;
-      }
+  .subtitle{
+    font-size:17px;
+    margin-bottom:25px;
+  }
 
-      .description {
-        font-size: 18px;
-      }
+  .passport-btn{
+    margin-bottom:35px;
+    padding:14px 28px;
+  }
 
-      .links-table th,
-      .links-table td {
-        padding: 18px;
-      }
+  .model-wrapper{
+    width:100%;
+    height:380px;
+    border-radius:20px;
+  }
 
-    }
+  .section{
+    margin:60px auto;
+    padding:0 15px;
+  }
+
+  .description{
+    font-size:16px;
+    line-height:1.7;
+  }
+
+  .table-container{
+    overflow-x:auto;
+  }
+
+  .links-table{
+    min-width:600px;
+  }
+
+}
 
 
 #description table{
@@ -276,16 +317,17 @@
     <div class="model-wrapper">
 
       <model-viewer
-        src="stantion.glb"
-        camera-controls
-        auto-rotate
-        auto-rotate-delay="0"
-        rotation-per-second="2deg"
-        interaction-prompt="none"
-        shadow-intensity="1"
-        exposure="1"
-        touch-action="pan-y">
-      </model-viewer>
+  src="stantion.glb"
+  camera-controls
+  auto-rotate
+  auto-rotate-delay="0"
+  rotation-per-second="2deg"
+  camera-orbit="45deg 75deg 3m"
+  min-camera-orbit="auto auto 2m"
+  max-camera-orbit="auto auto 5m"
+  field-of-view="30deg"
+  interaction-prompt="none">
+</model-viewer>
 
   </div>
 </section>
