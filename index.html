@@ -70,62 +70,49 @@
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  padding:60px 20px;
+  padding:60 20;
   text-align:center;
   background:
     radial-gradient(circle at top,#f4f4f4 0%,#ffffff 60%);
 }
 
 h1{
-  font-size:72px;
+  font-size:72;
   font-weight:normal;
-  letter-spacing:-2px;
-  margin-bottom:20px;
+  letter-spacing:-2;
+  margin-bottom:20;
 }
 
 .subtitle{
-  font-size:22px;
+  font-size:22;
   color:#666;
-  max-width:700px;
+  max-width:700;
   line-height:1.6;
-  margin-bottom:40px;
+  margin-bottom:40;
 }
 
-.hero {
-  width:100%;
-  padding:60px 20px;
-  text-align:center;
-  background:
-    radial-gradient(circle at top, #f4f4f4 0%, #ffffff 60%);
-}
 
-@media (max-width:768px){
 
-  .hero{
-    padding:30px 15px;
-  }
 
-}
-    
     .passport-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 16px 34px;
-      border-radius: 999px;
-      border: 1px solid #111;
+      padding: 16 34;
+      border-radius: 999;
+      border: 1 solid #111;
       text-decoration: none;
       color: #111;
       transition: 0.25s ease;
-      font-size: 16px;
+      font-size: 16;
       background: white;
-      margin-bottom: 70px;
+      margin-bottom: 70;
     }
 
     .passport-btn:hover {
       background: #111;
       color: white;
-      transform: translateY(-2px);
+      transform: translateY(-2);
     }
 
   .model-wrapper{
@@ -163,24 +150,41 @@ h1{
       letter-spacing: -1px;
     }
 
-    .table-container {
-      border-radius: 28px;
-      overflow: hidden;
-      background: white;
-      box-shadow:
-        0 8px 30px rgba(0,0,0,0.06);
-    }
+    .table-container{
+    overflow-x:hidden;
+  }
 
-    .links-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+  .links-table{
+    width:100%;
+    table-layout:fixed;
+  }
 
-    .links-table th,
-.links-table td{
-  padding:18px;
-  border-bottom:1px solid #f2f2f2;
+  .links-table th,
+  .links-table td{
+    padding:14px 10px;
+    font-size:15px;
+    word-break:break-word;
+    overflow-wrap:anywhere;
+  }
 
+  .links-table th:nth-child(1),
+  .links-table td:nth-child(1){
+    width:70%;
+  }
+
+  .links-table th:nth-child(2),
+  .links-table td:nth-child(2){
+    width:15%;
+    text-align:center;
+  }
+
+  .links-table th:nth-child(3),
+  .links-table td:nth-child(3){
+    width:15%;
+    text-align:center;
+  }
+
+}
   word-break:break-word;
   overflow-wrap:anywhere;
 }
@@ -267,9 +271,6 @@ h1{
     line-height:1.7;
   }
 
-  .table-container{
-    overflow-x:auto;
-  }
 
   .links-table{
   width:100%;
